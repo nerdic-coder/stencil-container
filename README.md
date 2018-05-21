@@ -20,7 +20,7 @@ A stencil component that displays child elements with conditional data.
 
 ## Parameters
 
-### ng-if
+### st-if
 
 An expression that is either true or false.
 
