@@ -28,7 +28,6 @@ declare global {
 
   namespace StencilComponents {
     interface StContainer {
-      'shouldRender': boolean;
       'stIf': string;
     }
   }
@@ -52,7 +51,6 @@ declare global {
   }
   namespace JSXElements {
     export interface StContainerAttributes extends HTMLAttributes {
-      'shouldRender'?: boolean;
       'stIf'?: string;
     }
   }

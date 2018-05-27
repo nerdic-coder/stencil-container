@@ -28,7 +28,6 @@ describe('st-container', () => {
       });
 
       expect(element.stIf).toEqual('true');
-      expect(element.shouldRender).toBeTruthy();
       expect(element.textContent.trim()).toEqual('Hello, World!');
     });
 

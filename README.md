@@ -101,4 +101,9 @@ Watchable tests:
 npm run test.watch
 ```
 
+## Blog article
+
+Feel free to read my blog article on how I created this stencil component,
+[How I created and published my first Stencil component](https://nerdic-coder.com/2018/05/27/how-i-created-and-published-my-first-stencil-component/)
+
 All feedback are welcome!

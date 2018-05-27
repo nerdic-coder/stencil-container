@@ -1,4 +1,4 @@
-import { Component, Prop, Watch } from '@stencil/core';
+import { Component, Prop, Watch, State } from '@stencil/core';
 
 @Component({
   tag: 'st-container',
@@ -6,14 +6,12 @@ import { Component, Prop, Watch } from '@stencil/core';
 })
 export class StContainer {
 
-  @Prop() private stIf: string;
-  @Prop({ mutable: true }) private shouldRender = true;
+  @Prop({ reflectToAttr: true }) private stIf: string;
+  @State() private shouldRender = true;
 
   @Watch('stIf')
   watchHandler(newValue: string) {
-    console.log('The new value of stIf is: ', newValue);
-    this.shouldRender = false;
-    this.shouldRender = new Function("return " + this.stIf)();
+    this.shouldRender = new Function("return " + newValue)();
   }
 
   /**
@@ -26,7 +24,6 @@ export class StContainer {
    * componentWillLoad will only be called once.
    */
   componentWillLoad() {
-    console.log(this.stIf);
     if (this.stIf !== undefined) {
       this.shouldRender = new Function("return " + this.stIf)();
     }

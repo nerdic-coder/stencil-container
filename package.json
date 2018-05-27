@@ -1,7 +1,7 @@
 {
   "name": "stencil-container",
-  "version": "0.0.2",
-  "description": "Stencil Container with if-statements and for-loops",
+  "version": "0.0.3",
+  "description": "Stencil Container with if-statements",
   "module": "dist/esm/index.js",
   "main": "dist/index.js",
   "types": "dist/types/components.d.ts",
